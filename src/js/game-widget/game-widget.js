@@ -38,10 +38,6 @@ export default class GameWiget {
 
     this._generatePositions();
 
-    const img = document.createElement('img');
-    img.src = url.default;
-    img.classList.add('goblin-img');
-
-    this._getFieldByPosition().append(img);
+    this._getFieldByPosition().insertAdjacentHTML('afterBegin', `<img class="goblin-img" src="${url.default}"></img>`);
   }
 }
